@@ -1,0 +1,18 @@
+@mixin lighten-darken-color($baseColor, $colorNum) {
+    
+    .color-#{$colorNum}-base {
+        background-color: $baseColor;
+    }
+
+    @for $colorNumber from 0 to 5 {
+        .color-#{$colorNum}-ligthen-#{$colorNumber} {
+            background-color: lighten($color: $baseColor, $amount: 10% * $colorNumber)
+        }
+    }
+
+    @for $colorNumber from 0 to 5 {
+        .color-#{$colorNum}-darken-#{$colorNumber} {
+            background-color: darken($color: $baseColor, $amount: 10% * $colorNumber)  
+        }
+    }
+}
