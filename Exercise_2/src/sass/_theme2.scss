@@ -1,16 +1,7 @@
 @import "_mixin.scss";
 
 .box {
-    height: 3em;
-    width: 5em;
-    border: 0.08em solid;
-    border-color: grey;
-    font-weight: bold;
-    font-size: 25px;
-    padding-left: 2%;
-    padding-top: 2%;
-    margin-left: 2em;
-    @include rounded-corner(0.3em);
+    @include box();
 }
 
 .base {
@@ -30,13 +21,18 @@
 
 .shadowBox {
     @extend .box;
+    @include shadowBox(0.3em);
     box-shadow:10px 15px 8px 1px black;
 }
 
 .principalFont {
-    margin-left: 1.5em;
+    margin-left: 2em;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
 }
 
 .secondaryFont {
-    margin-left: 1.5em;
+    margin-left: 2em;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
 }

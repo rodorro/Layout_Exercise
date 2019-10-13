@@ -1,3 +1,21 @@
-@mixin rounded-corner($size: 0.1em) {
+@mixin box {
+    height: 4em;
+    width: 6em;
+    border: 0.08em solid;
+    border-color: grey;
+    font-weight: bold;
+    font-size: 20px;
+    padding-left: 2%;
+    padding-top: 2%;
+    margin-left: 2em;
+    font-family: "comic sans ms", "comic sans";
+}
+
+@mixin shadowBox($size: 0.1em) {
+    padding-top: 0%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
     border-radius: $size;
 }
