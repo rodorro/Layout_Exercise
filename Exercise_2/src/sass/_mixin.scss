@@ -1,0 +1,3 @@
+@mixin rounded-corner($size: 0.1em) {
+    border-radius: $size;
+}

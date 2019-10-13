@@ -1,0 +1,52 @@
+@import "_mixin.scss";
+
+.box {
+    height: 4em;
+    width: 6em;
+    border: 0.08em solid;
+    border-color: grey;
+    font-weight: bold;
+    font-size: 20px;
+    padding-left: 2%;
+    padding-top: 2%;
+    margin-left: 2em;
+    font-family: 'Arial Narrow Bold', sans-serif;
+    @include rounded-corner();
+}
+
+.base {
+    @extend .box;
+    background-color: red;
+}
+
+.important {
+    @extend .box;
+    background-color: maroon;
+}
+
+.warning {
+    @extend .box;
+    background-color: pink;
+}
+
+.shadowBox {
+    @extend .box;
+    padding-top: 0%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    box-shadow: -10px 15px 8px 1px black;
+}
+
+.principalFont {
+    margin-left: 2.5em;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+.secondaryFont {
+    margin-left: 2.5em;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
