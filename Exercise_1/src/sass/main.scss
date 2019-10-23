@@ -21,6 +21,4 @@
     color: white;
 }
 
-@include lighten-darken-color(red, 1);
-@include lighten-darken-color(green, 2);
-@include lighten-darken-color(blue, 3);
+@include colorPalette();

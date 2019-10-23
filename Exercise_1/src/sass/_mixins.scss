@@ -1,18 +1,22 @@
-@mixin lighten-darken-color($baseColor, $colorNum) {
-    
-    .color-#{$colorNum}-base {
-        background-color: $baseColor;
-    }
+$colors: red, green, blue;
 
-    @for $colorNumber from 0 to 5 {
-        .color-#{$colorNum}-ligthen-#{$colorNumber} {
-            background-color: lighten($color: $baseColor, $amount: 10% * $colorNumber)
-        }
-    }
+@mixin colorPalette() {
 
-    @for $colorNumber from 0 to 5 {
-        .color-#{$colorNum}-darken-#{$colorNumber} {
-            background-color: darken($color: $baseColor, $amount: 10% * $colorNumber)  
+    $colorNum: 1;
+    @each $color in $colors {
+        .color-#{$colorNum}-base {
+            background-color: $color;
         }
+        @for $colorNumber from 0 to 5 {
+            .color-#{$colorNum}-ligthen-#{$colorNumber} {
+                background-color: lighten($color: $color, $amount: 10% * $colorNumber)
+            }
+        }
+        @for $colorNumber from 0 to 5 {
+            .color-#{$colorNum}-darken-#{$colorNumber} {
+                background-color: darken($color: $color, $amount: 10% * $colorNumber)  
+            }
+        }
+        $colorNum: $colorNum+1;
     }
 }
