@@ -1,9 +1,43 @@
+body {
+    margin: 0;
+}
 
 .header {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
-    //padding: 1rem;
+    justify-content: space-between;
+    padding-left: 1rem;
+    padding-right: 1rem;
     background-color: pink;
+}
+
+nav {
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    list-style: none;
+    list-style-type: none;
+    margin: 0;
+    -webkit-padding-start: 0;
+}
+
+ul li a {
+    color: black;
+    margin: 0px 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.menu li {
+    width: 100%;
+    border: 2px grey solid;
+    text-align: center;
 }
